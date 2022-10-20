@@ -7,12 +7,14 @@ public class User {
   private String username;
   private String email;
   private List<Skill> skills;
+  private AccountType accountType;
 
-  public User(long id, String username, String email, List<Skill> skills) {
+  public User(long id, String username, String email, List<Skill> skills, AccountType accountType) {
     this.id = id;
     this.username = username;
     this.email = email;
     this.skills = skills;
+    this.accountType = accountType;
   }
 
   public long getId() {
@@ -45,5 +47,13 @@ public class User {
 
   public void setSkills(List<Skill> skills) {
     this.skills = skills;
+  }
+
+  public AccountType getAccountType() {
+    return accountType;
+  }
+
+  public void setAccountType(AccountType accountType) {
+    this.accountType = accountType;
   }
 }
